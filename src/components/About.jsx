@@ -29,8 +29,9 @@ const About = () => {
                 <p className='my-10 max-w-lg'>
                     We are a team of experienced professionals who are dedicated to providing the best possible service to our clients.We are the Great Builders. Our mission is to build the best homes for our clients. Our clients are our partners and we are committed to providing them with the best possible service.
                 </p>
-                <a href="#Contact" className=' bg-blue-900 text-white hover:border-blue-900 hover:border-2 px-6 py-2 rounded hover:bg-white hover:text-black transition-all duration-300'>Learn More</a>
-
+                <button className='bg-blue-900 text-white hover:border-blue-900 hover:border-1 px-6 py-2 rounded hover:bg-white hover:text-black transition-all duration-100'>
+                    Learn More
+                </button>
             </div>
         </div>
     </div>
