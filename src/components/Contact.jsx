@@ -1,5 +1,6 @@
 import React from 'react'
 import { toast } from 'react-toastify';
+import { motion } from 'framer-motion'
 
 const Contact = () => {
     const [result, setResult] = React.useState("");
@@ -29,9 +30,14 @@ const Contact = () => {
     }
   };
   return (
-        <div className='container mx-auto py-4 pt-20 px-6 md:px-20 lg:px-32 w-full overflow-hidden' id='Contact'>
+        <motion.div 
+        initial={{ opacity: 0, x: -100 }}
+          transition={{ duration: 1 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+        className='container mx-auto py-4 pt-20 px-6 md:px-20 lg:px-32 w-full overflow-hidden' id='Contact'>
         <h1 className='text-2xl sm:text-4xl md:text-5xl font-bold mb-2 text-center'>Conatact <span className='text-blue-800 underline underline-offset-4 decoration-1 underline-blue-900 font-light'>Us</span></h1>
-        <p className='text-center text-gray-500 mb-8 max-w-80 mx-auto'> reach us anytime , Just send us a message</p>
+        <p className='text-center text-gray-500 mb-10 max-w-80 mx-auto'> reach us anytime , Just send us a message</p>
 
         <form onSubmit={onSubmit} action="" className='max-w-2xl mx-auto'>
             <div className='flex flex-col sm:flex-row gap-8'>
@@ -50,7 +56,7 @@ const Contact = () => {
             </div>
             <button type='submit' className='bg-blue-800 text-white px-4 py-2 rounded-md hover:bg-blue-900 transition-colors duration-300'>{result ? result : "Send Message"}</button>
         </form>
-        </div>
+        </motion.div>
 
   )
 }
